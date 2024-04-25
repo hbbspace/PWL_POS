@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LevelController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
@@ -10,6 +11,7 @@ Route::get('/', function () {
     return view('default_welcome');
 });
 
+Route::get('/level', [LevelController::class,'index']);
 
 Route::get('/home', [HomeController::class,'index']);
 
