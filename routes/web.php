@@ -14,21 +14,22 @@ Route::get('/', function () {
 
 Route::get('/level', [LevelController::class,'index']);
 Route::get('/kategori', [KategoriController::class,'index']);
+Route::get('/user', [UserController::class,'index']);
 
 Route::get('/home', [HomeController::class,'index']);
 
-Route::prefix('products')->group(function() {
-    Route::get('/', [ProductsController::class,'index']);
-    Route::get('/category/food-beverage', [ProductsController::class,'foodBeverage']);
-    Route::get('/category/beauty-health', [ProductsController::class,'beautyHealth']);
-    Route::get('/category/home-care', [ProductsController::class,'homeCare']);
-    Route::get('/category/baby-kid', [ProductsController::class,'babyKid']); 
-});
+// Route::prefix('products')->group(function() {
+//     Route::get('/', [ProductsController::class,'index']);
+//     Route::get('/category/food-beverage', [ProductsController::class,'foodBeverage']);
+//     Route::get('/category/beauty-health', [ProductsController::class,'beautyHealth']);
+//     Route::get('/category/home-care', [ProductsController::class,'homeCare']);
+//     Route::get('/category/baby-kid', [ProductsController::class,'babyKid']); 
+// });
 
-Route::prefix('user')->group(function() {
-    Route::get('/', [UserController::class,'index']);
-    Route::get('/{user}', [UserController::class,'index']);
-    Route::get('/{user}/{id}', [UserController::class,'index']);
-});
+// Route::prefix('user')->group(function() {
+//     Route::get('/', [UserController::class,'index']);
+//     Route::get('/{user}', [UserController::class,'index']);
+//     Route::get('/{user}/{id}', [UserController::class,'index']);
+// });
 
-Route::get('/penjualan', [PenjualanController::class,'index']);
+// Route::get('/penjualan', [PenjualanController::class,'index']);
